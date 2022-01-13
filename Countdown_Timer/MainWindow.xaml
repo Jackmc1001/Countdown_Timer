@@ -1,0 +1,16 @@
+﻿<Window x:Class="Countdown_Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Countdown_Timer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Calendar x:Name="Calandar" HorizontalAlignment="Left" Margin="139,102,0,0" VerticalAlignment="Top" Height="169" Width="189" SelectedDatesChanged="Calendar_SelectedDatesChanged"/>
+        <TextBlock x:Name="Date_Selected" HorizontalAlignment="Left" Margin="376,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="259" FontSize="16"><Run Text="Date"/><Run Text=" "/><Run Text="Selected"/><Run Text=" : "/></TextBlock>
+        <TextBlock x:Name="Time_UntilDate" HorizontalAlignment="Left" Height="26" Margin="376,245,0,0" TextWrapping="Wrap" Text="Time until date :" VerticalAlignment="Top" Width="356" FontSize="16"/>
+        <TextBlock x:Name="tblk_TodaysDate" HorizontalAlignment="Left" Margin="376,102,0,0" TextWrapping="Wrap" Text="Today's Date :" VerticalAlignment="Top" Width="198" Height="25" FontSize="16"/>
+
+    </Grid>
+</Window>
