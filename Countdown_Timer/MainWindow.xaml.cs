@@ -27,19 +27,20 @@ namespace Countdown_Timer
 
         private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            TimeSpan maths;
+            // create a timespan to count days and calculate
+            TimeSpan timeDifference;
             DateTime Date = (DateTime)Calandar.SelectedDate;
             Date_Selected.Text = $"Date Selected :  {Date.ToShortDateString()}";
 
             if (Date > DateTime.Now)
             {
-                maths = Date - DateTime.Now;
-                Time_UntilDate.Text = $"Time until Date : {maths.Days} Days {maths.Hours} hours {maths.Minutes} Minutes";
+                timeDifference = Date - DateTime.Now;
+                Time_UntilDate.Text = $"Time until Date : {timeDifference.Days} Days {timeDifference.Hours} hours {timeDifference.Minutes} Minutes";
             }
             else if (Date < DateTime.Now)
             {
-                maths = DateTime.Now - Date;
-                Time_UntilDate.Text = $"Time until Date : {maths.Days} Days {maths.Hours} hours {maths.Minutes} Minutes";
+                timeDifference = DateTime.Now - Date;
+                Time_UntilDate.Text = $"Time until Date : {timeDifference.Days} Days {timeDifference.Hours} hours {timeDifference.Minutes} Minutes";
             }
             
             
@@ -47,6 +48,7 @@ namespace Countdown_Timer
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // show todays date on load
             tblk_TodaysDate.Text = $"Todays Date : {DateTime.Now.ToShortDateString()}";
            
             
